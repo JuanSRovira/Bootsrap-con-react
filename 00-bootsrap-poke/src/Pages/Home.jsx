@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react'
 
 const Home = () => {
 const [pokemons, setPokemons] = useState([]) //Pokemon's List
+const [search, setSearch] = useState('')
 
 //API's call
 
@@ -15,16 +16,27 @@ useEffect (() => {
 }, 
 [])
 
+
+const handleSearch = (event) => {
+    setSearch (event.target.value)
+} 
+
+
 return (
 <>
     <h1>Home</h1>
     <div className='container'>
         <h1>Home</h1>
+        <form className="form-inline my-2 w-100">
+            <input type="text" className='form-control' placeholder='Search Pokemon' value={search} onChange={handleSearch}/>
+
+            
+        </form>
         <div className='row'>
         {
             pokemons.map(pokemon => (
 
-            <div className='col-2' key={pokemon.name}>
+            <div className='col-2'  key={pokemon.name}>
                 <div className='card'>
                 <div className='card-body'>
                     <img
