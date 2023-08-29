@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
 const [pokemons, setPokemons] = useState([]) //Pokemon's List
@@ -46,10 +47,16 @@ return (
                     <img
                 className='card-img-top'
                 src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated//${pokemon.url.split('/')[6]}.gif`}
-    
-                    alt={pokemon.name}
+                alt={pokemon.name}
                     />
-                    <h5 className='card-title'>{pokemon.name}</h5>
+                    <Link 
+                    className='card-title'
+                    to={`/pokemon/${pokemon.url.split('/')[6]}`}
+                    >
+
+
+                    {pokemon.name}
+                    </Link>
             </div>
                 </div>
             </div>
