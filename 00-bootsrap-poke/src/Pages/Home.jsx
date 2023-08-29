@@ -28,9 +28,9 @@ const filterPokemons = pokemons.filter(pokemon => {
 
 return (
 <>
-    <h1>Home</h1>
+
     <div className='container'>
-        <h1>Home</h1>
+        
         <form className="form-inline my-2 w-100">
             <input type="text" className='form-control' placeholder='Search Pokemon' value={search} onChange={handleSearch}/>
 
