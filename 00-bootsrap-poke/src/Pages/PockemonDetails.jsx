@@ -21,7 +21,7 @@ const PockemonDetails = () => {
         <div className='card-body'>
           <div className='row'>
             <div className='col-md-4'>
-              <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${id}.gif`} alt={pokemon?.name} className='img-fluid' />
+              <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${id}.gif`} alt={pokemon?.name} className='img-fluid' width={230} />
             </div>
             <div className='col-md-8'>
               <table className='table'>
